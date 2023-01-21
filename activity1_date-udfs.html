@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>
+      function dayAsString(num){
+        var weekdays = [];
+        weekdays[0] = 'Sunday';
+        weekdays[1] = 'Monday';
+        weekdays[2] = 'Tuesday';
+        weekdays[3] = 'Wednesday';
+        weekdays[4] = 'Thursday';
+        weekdays[5] = 'Friday';
+        weekdays[6] = 'Saturday';
+
+        return weekdays[num-1];
+      }
+
+      function enterDay(){
+        var userDay = prompt("Enter a day of the week (in number).", "");
+        alert("You enter " + dayAsString(userDay) + ".");
+      }
+
+      function getCurrentDay(){
+        var today = new Date();
+        alert(dayAsString(today.getDay() + 1));
+      }
+    </script>
+    <title>Activity 1</title>
+
+    <style>
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    body{
+      margin: 25px;
+      padding: 2rem;
+      text-align: center;
+      background: #696969;
+    }
+
+    ul{
+      list-style: none;
+      background: transparent;
+    }
+
+    ul li{
+      display: inline-block;
+      position: relative;
+    }
+
+    ul li a{
+      display: block;
+      padding: 15px 20px;
+      color: #000000;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    ul li ul.dropdown li{
+      display: block;
+    }
+
+    ul li ul.dropdown{
+      width: 100%;
+      background: #ffffff;
+      position: absolute;
+      z-index: 999;
+      display: none;
+    }
+
+    ul li a:hover{
+      background: #8c52ff;
+      transition: ease .5s;
+      color: #ffffff;
+    }
+
+    ul li:hover ul.dropdown{
+      display: block;
+    }
+
+    .btn{
+      display: inline-block;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    #btn-1{
+      padding: 20px;
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 10px;
+      color: #ffffff;
+      font-weight: bold;
+      margin-right: 15px;
+      margin-bottom: 7px;
+      background: transparent;
+    }
+
+    #btn-2{
+      padding: 20px;
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 10px;
+      color: #ffffff;
+      font-weight: bold;
+      margin-bottom: 7px;
+      background: transparent;
+    }
+
+    #btn-1:hover{
+      color: #ffffff;
+      background: #8c52ff;
+      transform: scale(1.1);
+      transition: ease .5s;
+      border-width: thin;
+    }
+    
+    #btn-2:hover{
+      color: #ffffff;
+      background: #8c52ff;
+      transform: scale(1.1);
+      transition: ease .5s;
+      border-width: thin;
+    }
+
+    footer{
+      background: #212121;
+      color: #ffffff;
+      margin-top: 20px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+    }
+  </style>
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#">Activities</a>
+        <ul class="dropdown">
+          <li><a href="activity1_date-udfs.html">Activity 1</a></li>
+          <li><a href="activity2_conditionals.html">Activity 2</a></li>
+          <li><a href="activity3_loops.html">Activity 3</a></li>
+          <li><a href="activity4_color-changer.html">Activity 4</a></li>
+          <li><a href="activity5_try-catch.html">Activity 5</a></li>
+        </ul>
+      </li>
+    </ul>
+
+      <div class="btn">
+        <button onclick="enterDay()" id="btn-1">CHOOSE DAY</button>
+        <button onclick="getCurrentDay()" id="btn-2">GET CURRENT DAY</button>
+      </div>
+
+    <footer>Copyright © 2022 by Jaimee Romero. All Rights Reserved.</footer>
+  </body>
+</html>

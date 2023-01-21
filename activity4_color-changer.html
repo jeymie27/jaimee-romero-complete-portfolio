@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Activity 4</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        font-family: sans-serif;
+      }
+
+      body{
+        margin: 25px;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      ul{
+        list-style: none;
+        background: transparent;
+      }
+
+      ul li{
+        display: inline-block;
+        position: relative;
+      }
+
+      ul li a{
+        display: block;
+        padding: 15px 20px;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      ul li ul.dropdown li{
+        display: block;
+      }
+
+      ul li ul.dropdown{
+        width: 100%;
+        background: #ffffff;
+        position: absolute;
+        z-index: 999;
+        display: none;
+      }
+
+      ul li a:hover{
+        background: #8c52ff;
+        transition: ease .5s;
+        color: #ffffff;
+      }
+
+      ul li:hover ul.dropdown{
+        display: block;
+      }
+
+      main{
+        display: inline-block;
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      #btnRed{
+        padding: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 10px;
+        color: #000000;
+        font-weight: bold;
+        margin-top: 90px;
+        margin-right: 15px;
+        margin-bottom: 7px;
+      }
+
+      #btnRed:hover{
+        color: #ffffff;
+        background: #8c52ff;
+        border-width: thin;
+      }
+
+      #btnGreen{
+        padding: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 10px;
+        color: #000000;
+        font-weight: bold;
+        margin-right: 15px;
+        margin-bottom: 7px;
+      }
+
+      #btnGreen:hover{
+        color: #ffffff;
+        background: #8c52ff;
+        border-width: thin;
+      }
+
+      #btnOrange{
+        padding: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 10px;
+        color: #000000;
+        font-weight: bold;
+        margin-right: 15px;
+        margin-bottom: 7px;
+      }
+
+      #btnOrange:hover{
+        color: #ffffff;
+        background: #8c52ff;
+        border-width: thin;
+      }
+
+      #btnPink{
+        padding: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #000000;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      #btnPink:hover{
+        color: #ffffff;
+        background: #transparent;
+      }
+
+      footer{
+        background: #212121;
+        color: #ffffff;
+        margin-top: 50px;
+        padding: 0.5rem 1rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#">Activities</a>
+        <ul class="dropdown">
+          <li><a href="activity1_date-udfs.html">Activity 1</a></li>
+          <li><a href="activity2_conditionals.html">Activity 2</a></li>
+          <li><a href="activity3_loops.html">Activity 3</a></li>
+          <li><a href="activity4_color-changer.html">Activity 4</a></li>
+          <li><a href="activity5_try-catch.html">Activity 5</a></li>
+        </ul>
+      </li>
+    </ul>
+
+      <button onclick="changeColor('red')" id="btnRed">Red</button>
+      <button ondblclick="changeColor('green')" id="btnGreen">Green</button>
+      <button onmousedown="changeColor('orange')" onmouseup="changeColor('white')" id="btnOrange">Orange</button>
+      <a href="#" onmouseover="changeColor('pink')" onmouseout="changeColor('white')" id="btnPink">pink</a>
+
+    <script>
+      function changeColor(color)
+      {
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+
+    <footer>Copyright © 2022 by Jaimee Romero. All Rights Reserved.</footer>
+  </body>
+</html>
